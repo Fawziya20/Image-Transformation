@@ -105,8 +105,9 @@ plt.imshow(cropped_image)
 ## Output:
 ### i)Image Translation
 
+![img1](https://user-images.githubusercontent.com/75235022/166118057-a82612bb-7d7c-411e-bd7e-11715965df4b.png)
 
-![Untitled8 - Jupyter Notebook - Google Chrome 30-04-2022 23_44_43](https://user-images.githubusercontent.com/75235022/166118017-364312d0-097b-437d-aba1-acd66e0e4cd9.png)
+
 
 
 
