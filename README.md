@@ -40,27 +40,34 @@ Step8:
 Display all the Transformed images.
 
 ## Program:
-<br>
+```python
 Developed By:A.FAWZIYA
-<br>
 Register Number:212220230017
-<br>
+import numpy as np
+import cv2
+import matplotlib.pyplot as plt
+input_img=cv2.imread("img.jpg")
+input_img=cv2.cvtColor(input_img,cv2.COLOR_BGR2RGB)
+plt.axis('off')
+plt.imshow(input_img)
+plt.show()
+rows,cols,dim=input_img.shape
 i)Image Translation
 ```python
 Translation_matrix=np.float32([[1,0,120],[0,1,120],[0,0,1]])
 Translated_image=cv2.warpPerspective(original_img,Translation_matrix,(col,row))
 plt.axis("off")
 plt.imshow(Translated_image)
-```
+
 
 
 ii) Image Scaling
-```python
+
 Scaling_Matrix=np.float32([[1.2,0,0],[0,1.2,0],[0,0,1]])
 Scaled_image=cv2.warpPerspective(original_img,Scaling_Matrix,(col,row))
 plt.axis("off")
 plt.imshow(Scaled_image)
-```
+
 
 
 
