@@ -8,35 +8,44 @@ Anaconda - Python 3.7
 ## Algorithm:
 ###
 Step1:
-<br>
+
 Import the necessary libraries and read the original image and save it a image variable.
 
 Step2:
-<br>
-Translate the image using Translation_matrix=np.float32([[1,0,120],[0,1,120],[0,0,1]]) Translated_image=cv2.warpPerspective(org_img,Translation_matrix,(col,row))
+
+Translate the image using <br>
+Translation_matrix=np.float32([[1,0,120],[0,1,120],[0,0,1]]) <br>
+Translated_image=cv2.warpPerspective(org_img,Translation_matrix,(col,row))
 
 Step3:
-<br>
-Scale the image using Scaling_Matrix=np.float32([[1.2,0,0],[0,1.2,0],[0,0,1]]) Scaled_image=cv2.warpPerspective(org_img,Scaling_Matrix,(col,row))
+
+Scale the image using <br>
+Scaling_Matrix=np.float32([[1.2,0,0],[0,1.2,0],[0,0,1]]) <br>
+Scaled_image=cv2.warpPerspective(org_img,Scaling_Matrix,(col,row))
 
 Step4:
-<br>
-Shear the image using Shearing_matrix=np.float32([[1,0.2,0],[0.2,1,0],[0,0,1]]) Sheared_image=cv2.warpPerspective(org_img,Shearing_matrix,(col2,int(row1.5)))
+
+Shear the image using <br>
+Shearing_matrix=np.float32([[1,0.2,0],[0.2,1,0],[0,0,1]]) <br>
+Sheared_image=cv2.warpPerspective(org_img,Shearing_matrix,(col2,int(row1.5)))
 
 Step5:
-<br>
-Reflection of image can be achieved through the code Reflection_matrix_row=np.float32([[1,0,0],[0,-1,row],[0,0,1]]) Reflected_image_row=cv2.warpPerspective(org_img,Reflection_matrix_row,(col,int(row)))
+Reflection of image can be achieved through the code <br>
+Reflection_matrix_row=np.float32([[1,0,0],[0,-1,row],[0,0,1]]) <br>
+Reflected_image_row=cv2.warpPerspective(org_img,Reflection_matrix_row,(col,int(row)))
 
 Step6:
-<br>
-Rotate the image using Rotation_angle=np.radians(10) Rotation_matrix=np.float32([[np.cos(Rotation_angle),-np.sin(Rotation_angle),0], [np.sin(Rotation_angle),np.cos(Rotation_angle),0], [0,0,1]]) Rotated_image=cv2.warpPerspective(org_img,Rotation_matrix,(col,(row)))
+
+Rotate the image using <br>
+Rotation_angle=np.radians(10) <br>
+Rotation_matrix=np.float32([[np.cos(Rotation_angle),-np.sin(Rotation_angle),0], [np.sin(Rotation_angle),np.cos(Rotation_angle),0], [0,0,1]]) Rotated_image=cv2.warpPerspective(org_img,Rotation_matrix,(col,(row)))
 
 Step7:
-<br>
-Crop the image using cropped_image=org_img[10:350,320:560]
+Crop the image using <br>
+cropped_image=org_img[10:350,320:560]
 
 Step8:
-<br>
+
 Display all the Transformed images.
 
 ## Program:
@@ -53,7 +62,6 @@ plt.imshow(input_img)
 plt.show()
 rows,cols,dim=input_img.shape
 i)Image Translation
-```python
 Translation_matrix=np.float32([[1,0,120],[0,1,120],[0,0,1]])
 Translated_image=cv2.warpPerspective(original_img,Translation_matrix,(col,row))
 plt.axis("off")
@@ -72,16 +80,16 @@ plt.imshow(Scaled_image)
 
 
 iii)Image shearing
-```python
+
 Shearing_matrix=np.float32([[1,0.2,0],[0.2,1,0],[0,0,1]])
 Sheared_image=cv2.warpPerspective(original_img,Shearing_matrix,(col*2,int(row*1.5)))
 plt.axis("off")
 plt.imshow(Sheared_image)
-```
+
 
 
 iv)Image Reflection
-```python
+
 Reflection_matrix_col=np.float32([[-1,0,col],[0,1,0],[0,0,1]])
 Reflected_image_col=cv2.warpPerspective(original_img,Reflection_matrix_col,(col,int(row)))
 plt.axis("off")
@@ -91,12 +99,12 @@ Reflection_matrix_row=np.float32([[1,0,0],[0,-1,row],[0,0,1]])
 Reflected_image_row=cv2.warpPerspective(original_img,Reflection_matrix_row,(col,int(row)))
 plt.axis("off")
 plt.imshow(Reflected_image_row)
-```
+
 
 
 
 v)Image Rotation
-```python
+
 Rotation_angle=np.radians(10)
 Rotation_matrix=np.float32([[np.cos(Rotation_angle),-np.sin(Rotation_angle),0],
                                 [np.sin(Rotation_angle),np.cos(Rotation_angle),0],
@@ -104,12 +112,12 @@ Rotation_matrix=np.float32([[np.cos(Rotation_angle),-np.sin(Rotation_angle),0],
 Rotated_image=cv2.warpPerspective(original_img,Rotation_matrix,(col,(row)))
 plt.axis("off")
 plt.imshow(Rotated_image)
-```
+
 
 
 
 vi)Image Cropping
-```python
+
 cropped_image=original_img[10:350,320:560]
 plt.axis("off")
 plt.imshow(cropped_image)
