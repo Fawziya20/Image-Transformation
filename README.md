@@ -40,7 +40,6 @@ Step8:
 Display all the Transformed images.
 
 ## Program:
-```python
 Developed By:A.FAWZIYA
 Register Number:212220230017
 i)Image Translation
