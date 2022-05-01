@@ -40,8 +40,11 @@ Step8:
 Display all the Transformed images.
 
 ## Program:
+<br>
 Developed By:A.FAWZIYA
+<br>
 Register Number:212220230017
+<br>
 i)Image Translation
 ```python
 Translation_matrix=np.float32([[1,0,120],[0,1,120],[0,0,1]])
